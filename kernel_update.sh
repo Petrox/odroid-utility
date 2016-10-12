@@ -165,12 +165,12 @@ do_bootscript_update() {
 				cp $KTMP/x/*.scr /media/boot
 			elif [ "$BOARD" = "odroidxu3" ]; then
 				dlf $BOOT_SCR_UBUNTU_XU3 "Updating boot.ini for ODROID-XU3" /media/boot/boot.ini
-				dlf $GOVERNOR_XU3 "Upading governor setup for ODROID-XU3" /etc/init.d/ondemand
+				dlf $GOVERNOR_XU3 "Updating governor setup for ODROID-XU3" /etc/init.d/ondemand
 			fi
 			;;
 		"debian")
 			if [ "$BOARD" = "odroidxu" ]; then
-				dlf $BOOT_SCR_UBUNTU_XU "Download boot.ini for ODROID-XU" $KTMP/bscrxu.tar
+				dlf $BOOT_SCR_UBUNTU_XU "Downloading boot.ini for ODROID-XU" $KTMP/bscrxu.tar
 				tar xf bscrxu.tar
 				cp $KTMP/xu/* /boot
 			elif [ "$BOARD" = "odroidx2" ] || [ "$BOARD" = "odroidu2" ]; then
